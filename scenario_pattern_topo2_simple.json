@@ -1,0 +1,42 @@
+{
+  "params": {
+    "@h1@": "192.168.2.11",
+    "@h2@": "192.168.2.12",
+    "@h3@": "192.168.2.13",
+    "@h4@": "192.168.2.14",
+    "@h5@": "192.168.2.15",
+    "@h6@": "192.168.2.106",
+    "@h7@": "192.168.2.107",
+    "@h8@": "192.168.2.108"
+  },
+  "scenarios": {
+    "test-node to dut": {
+      "shared-wire-to-h6(SUCCESS)": [
+        ["h1", "h2"],
+        ["@h6@"]
+      ],
+      "shared-wire-to-h7(SUCCESS)": [
+        ["h3", "h4"],
+        ["@h7@"]
+      ],
+      "exclusive-wire-to-h8(SUCCESS)": [
+        ["h5"],
+        ["@h8@"]
+      ]
+    },
+    "dut to test-node": {
+      "shared-wire-to-h1_h2(SUCCESS)": [
+        ["h6"],
+        ["@h1@", "@h2@"]
+      ],
+      "shared-wire-to-h3_h4(SUCCESS)": [
+        ["h7"],
+        ["@h3@", "@h4@"]
+      ],
+      "exclusive-wire-to-h5(SUCCESS)": [
+        ["h8"],
+        ["@h5@"]
+      ]
+    }
+  }
+}

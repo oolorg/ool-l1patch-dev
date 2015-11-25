@@ -1,0 +1,147 @@
+{
+  "test-hosts": {
+    "h1": {
+      "port-index": {
+        "h1-eth0": {
+          "mac-addr": "0a:00:00:00:00:01",
+          "ip-addr": "192.168.2.11/24",
+          "gateway": "192.168.2.254"
+        }
+      }
+    },
+    "h2": {
+      "port-index": {
+        "h2-eth0": {
+          "mac-addr": "0a:00:00:00:00:02",
+          "ip-addr": "192.168.2.12/24",
+          "gateway": "192.168.2.254"
+        }
+      }
+    },
+    "h3": {
+      "port-index": {
+        "h3-eth0": {
+          "mac-addr": "0a:00:00:00:00:03",
+          "ip-addr": "192.168.2.13/24",
+          "gateway": "192.168.2.254"
+        }
+      }
+    },
+    "h4": {
+      "port-index": {
+        "h4-eth0": {
+          "mac-addr": "0a:00:00:00:00:04",
+          "ip-addr": "192.168.2.14/24",
+          "gateway": "192.168.2.254"
+        }
+      }
+    },
+    "h5": {
+      "port-index": {
+        "h5-eth0": {
+          "mac-addr": "0a:00:00:00:00:05",
+          "ip-addr": "192.168.2.15/24"
+        }
+      }
+    }
+  },
+  "dut-hosts": {
+    "h6": {
+      "port-index": {
+        "h6-eth0.200": {
+          "vlan-tagged": true,
+          "vlan-id": 200
+        }
+      }
+    },
+    "h7": {
+      "port-index": {
+        "h7-eth0": {
+          "vlan-tagged": false
+        }
+      }
+    },
+    "h8": {
+      "port-index": {
+        "h8-eth0": {
+          "vlan-tagged": false
+        }
+      }
+    }
+  },
+  "dispatchers": {
+    "s1": {
+      "datapath-id": 1,
+      "description": "host edge switch",
+      "port-index": {
+        "s1-eth1": {
+          "number": 1
+        },
+        "s1-eth2": {
+          "number": 2
+        },
+        "s1-eth3": {
+          "number": 3
+        },
+        "s1-eth4": {
+          "number": 4
+        },
+        "s1-eth5": {
+          "number": 5
+        },
+        "s1-eth6": {
+          "number": 6
+        },
+        "s1-eth7": {
+          "number": 7
+        }
+      }
+    },
+    "s2": {
+      "datapath-id": 2,
+      "description": "inter switch",
+      "port-index": {
+        "s2-eth1": {
+          "number": 1
+        },
+        "s2-eth2": {
+          "number": 2
+        },
+        "s2-eth3": {
+          "number": 3
+        },
+        "s2-eth4": {
+          "number": 4
+        }
+      }
+    },
+    "s3": {
+      "datapath-id": 3,
+      "description": "DUT edge switch",
+      "port-index": {
+        "s3-eth1": {
+          "number": 1
+        },
+        "s3-eth2": {
+          "number": 2
+        },
+        "s3-eth3": {
+          "number": 3
+        }
+      }
+    }
+  },
+  "link-list": [
+    [["h1", "h1-eth0"], ["s1", "s1-eth3"]],
+    [["h2", "h2-eth0"], ["s1", "s1-eth4"]],
+    [["h3", "h3-eth0"], ["s1", "s1-eth5"]],
+    [["h4", "h4-eth0"], ["s1", "s1-eth6"]],
+    [["h5", "h5-eth0"], ["s1", "s1-eth7"]],
+    [["s1", "s1-eth1"], ["s2", "s2-eth1"]],
+    [["s1", "s1-eth2"], ["s2", "s2-eth2"]],
+    [["s2", "s2-eth3"], ["s3", "s3-eth1"]],
+    [["h6", "h6-eth0.200"], ["s3", "s3-eth2"]],
+    [["h7", "h7-eth0"], ["s3", "s3-eth3"]],
+    [["h8", "h8-eth0"], ["s2", "s2-eth4"]]
+  ]
+}

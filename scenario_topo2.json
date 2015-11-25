@@ -1,0 +1,82 @@
+[
+  {
+    "task-list": [
+      {
+        "source": "h1", 
+        "destination": "192.168.2.106", 
+        "task": "[shared-wire-to-h6] ping h1 to @h6@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h2", 
+        "destination": "192.168.2.106", 
+        "task": "[shared-wire-to-h6] ping h2 to @h6@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h3", 
+        "destination": "192.168.2.107", 
+        "task": "[shared-wire-to-h7] ping h3 to @h7@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h4", 
+        "destination": "192.168.2.107", 
+        "task": "[shared-wire-to-h7] ping h4 to @h7@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h5", 
+        "destination": "192.168.2.108", 
+        "task": "[exclusive-wire-to-h8] ping h5 to @h8@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }
+    ], 
+    "scenario": "test-node to dut"
+  }, 
+  {
+    "task-list": [
+      {
+        "source": "h6", 
+        "destination": "192.168.2.11", 
+        "task": "[shared-wire-to-h1_h2] ping h6 to @h1@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h6", 
+        "destination": "192.168.2.12", 
+        "task": "[shared-wire-to-h1_h2] ping h6 to @h2@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h7", 
+        "destination": "192.168.2.13", 
+        "task": "[shared-wire-to-h3_h4] ping h7 to @h3@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h7", 
+        "destination": "192.168.2.14", 
+        "task": "[shared-wire-to-h3_h4] ping h7 to @h4@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }, 
+      {
+        "source": "h8", 
+        "destination": "192.168.2.15", 
+        "task": "[exclusive-wire-to-h5] ping h8 to @h5@", 
+        "command": "ping", 
+        "expect": "SUCCESS"
+      }
+    ], 
+    "scenario": "dut to test-node"
+  }
+]

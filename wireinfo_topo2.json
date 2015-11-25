@@ -1,0 +1,84 @@
+{
+  "wire-index" : {
+    "wire1": {
+      "description": "wire between host1(h1) and h6",
+      "mode": "shared",
+      "test-host-port": ["h1", "h1-eth0"],
+      "dut-host-port": ["h6", "h6-eth0.200"],
+      "path": [
+        ["s1", "s1-eth3"],
+        ["s1", "s1-eth1"],
+        ["s2", "s2-eth1"],
+        ["s2", "s2-eth3"],
+        ["s3", "s3-eth1"],
+        ["s3", "s3-eth2"]
+      ]
+    },
+    "wire2": {
+      "description": "wire between host2(h2) and h6",
+      "mode": "shared",
+      "test-host-port": ["h2", "h2-eth0"],
+      "dut-host-port": ["h6", "h6-eth0.200"],
+      "path": [
+        ["s1", "s1-eth4"],
+        ["s1", "s1-eth1"],
+        ["s2", "s2-eth1"],
+        ["s2", "s2-eth3"],
+        ["s3", "s3-eth1"],
+        ["s3", "s3-eth2"]
+      ]
+    },
+    "wire3": {
+      "description": "wire between host3(h3) and h7",
+      "mode": "shared",
+      "test-host-port": ["h3", "h3-eth0"],
+      "dut-host-port": ["h7", "h7-eth0"],
+      "path": [
+        ["s1", "s1-eth5"],
+        ["s1", "s1-eth1"],
+        ["s2", "s2-eth1"],
+        ["s2", "s2-eth3"],
+        ["s3", "s3-eth1"],
+        ["s3", "s3-eth3"]
+      ]
+    },
+    "wire4": {
+      "description": "wire between host4(h4) and h7",
+      "mode": "shared",
+      "test-host-port": ["h4", "h4-eth0"],
+      "dut-host-port": ["h7", "h7-eth0"],
+     "path": [
+        ["s1", "s1-eth6"],
+        ["s1", "s1-eth1"],
+        ["s2", "s2-eth1"],
+        ["s2", "s2-eth3"],
+        ["s3", "s3-eth1"],
+        ["s3", "s3-eth3"]
+      ]
+    },
+    "wire5": {
+      "description": "wire between host5(h5) and h8",
+      "mode": "exclusive",
+      "test-host-port": ["h5", "h5-eth0"],
+      "dut-host-port": ["h8", "h8-eth0"],
+      "path": [
+        ["s1", "s1-eth7"],
+        ["s1", "s1-eth2"],
+        ["s2", "s2-eth2"],
+        ["s2", "s2-eth4"]
+      ]
+    }
+  },
+  "wire-group-index": {
+    "wiregroup1": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 101,
+      "wires": ["wire1", "wire2"]
+    },
+    "wiregroup2": {
+      "description": "DUT:h7, PORT:h7-eth0",
+      "id": 102,
+      "wires": ["wire3", "wire4"]
+    }
+  }
+}
