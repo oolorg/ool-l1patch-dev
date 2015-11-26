@@ -71,12 +71,12 @@
 
 ##  OpenFlowコントローラの起動
   下記のコマンドにてOpenFlowコントローラを起動することができます。
-  hoge@prjexp01:~/l1patch-dev$ ryu-manager --verbose patch_ofc.py  
-  ※サンプルのOFCのREST API URLはlocalhost:8080
+  > hoge@prjexp01:~/l1patch-dev$ ryu-manager --verbose patch_ofc.py  
+  ※サンプルのOFCのREST API URLはlocalhost:8080  
 
 ##  L1patchの実行(手動操作モード)
   下記のコマンドを実行することで手動操作での試験を実行することが可能です。
-  hoge@prjexp01:~/l1patch-dev$ sudo python run_scenario_test.py -f testdefs_topo2.json --all-layers   --manual
+  > hoge@prjexp01:~/l1patch-dev$ sudo python run_scenario_test.py -f testdefs_topo2.json --all-layers   --manual  
 
   上記を実行するとMininet CLIに入ります。  
   下記のコマンドを実行することで試験環境にて主導操作での試験や確認を実行することができます。
@@ -112,5 +112,5 @@
 
 ##  応用試験  
   応用編として、テスト定義の中で指定するサンプルのテストシナリオファイルをご用意しました。`scenario_pattern_topo2.json`[リンク](scenario_pattern_topo2.json)    
-  こちらの試験は一部トラフィック(Ping)が通らないことを確認するためのシナリオが含まれております。
-  ご興味のある方はこちらも実行してみてください。
+  こちらの試験は一部トラフィック(Ping)が通らないことを確認するためのシナリオが含まれております。  
+  ご興味のある方はこちらも実行してみてください。  
