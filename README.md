@@ -14,7 +14,7 @@
   ＜本件に関するお問い合わせ＞  
   一般社団法人沖縄オープンラボラトリ  
   L1Patch応用NWテストシステムPJ 担当  
-  Mail:
+  Mail:<l1patchnwtestinfo@okinawaopenlabs.org>
 
 # L1patchの使用方法  
   このReadmeではサンプルシナリオ(`scenario_pattern_topo2_simple.json`, [リンク](scenario_pattern_topo2_simple.json))を元にサンプルプログラムの使用方法について説明します。  
