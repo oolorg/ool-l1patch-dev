@@ -1,0 +1,305 @@
+{
+  "wire-index" : {
+    "wire1": {
+      "description": "int11 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["int11", "int11-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/2.2015"],
+      "path": [
+        ["s1", "s1-eth1"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/6"]
+      ]
+    },
+    "wire2": {
+      "description": "int12 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["int12", "int12-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/3.2015"],
+      "path": [
+        ["s1", "s1-eth2"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/7"]
+      ]
+    },
+    "wire3": {
+      "description": "int13 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["int13", "int13-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/5.2015"],
+      "path": [
+        ["s1", "s1-eth3"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/4"]
+      ]
+    },
+    "wire4": {
+      "description": "int14 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["int14", "int14-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/3.2015"],
+      "path": [
+        ["s1", "s1-eth4"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/5"]
+      ]
+    },
+    "wire5": {
+      "description": "int21 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["int21", "int21-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/2.2016"],
+      "path": [
+        ["s1", "s1-eth5"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/6"]
+      ]
+    },
+    "wire6": {
+      "description": "int22 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["int22", "int22-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/3.2016"],
+      "path": [
+        ["s1", "s1-eth6"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/7"]
+      ]
+    },
+    "wire7": {
+      "description": "int23 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["int23", "int23-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/5.2016"],
+      "path": [
+        ["s1", "s1-eth7"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/4"]
+      ]
+    },
+    "wire8": {
+      "description": "int24 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["int24", "int24-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/3.2016"],
+      "path": [
+        ["s1", "s1-eth8"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/5"]
+      ]
+    },
+    "wire9": {
+      "description": "dmz11 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["dmz11", "dmz11-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/2.2013"],
+      "path": [
+        ["s1", "s1-eth9"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/6"]
+      ]
+    },
+    "wire10": {
+      "description": "dmz12 to l2sw1",
+      "mode": "shared",
+      "test-host-port": ["dmz12", "dmz12-eth0"],
+      "dut-host-port": ["L2SW1", "gi1/0/3.2013"],
+      "path": [
+        ["s1", "s1-eth10"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/7"]
+      ]
+    },
+    "wire11": {
+      "description": "dmz13 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["dmz13", "dmz13-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/5.2013"],
+      "path": [
+        ["s1", "s1-eth11"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/4"]
+      ]
+    },
+    "wire12": {
+      "description": "dmz14 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["dmz14", "dmz14-eth0"],
+      "dut-host-port": ["L2SW2", "gi1/0/3.2013"],
+      "path": [
+        ["s1", "s1-eth12"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/4"],
+        ["l1pjofsw3", "ge-1/1/1"],
+        ["l1pjofsw3", "ge-1/1/5"]
+      ]
+    },
+    "wire13": {
+      "description": "ext1 to l2sw2",
+      "mode": "shared",
+      "test-host-port": ["ext1", "ext1-eth0"],
+      "dut-host-port": ["L2EX", "gi1/0/4"],
+      "path": [
+        ["s1", "s1-eth13"],
+        ["s1", "eth2"],
+        ["l1pjofsw2", "ge-1/1/1"],
+        ["l1pjofsw2", "ge-1/1/3"],
+        ["l1pjofsw1", "ge-1/1/2"],
+        ["l1pjofsw1", "ge-1/1/8"]
+      ]
+    },
+    "wire14": {
+      "description": "L2EX to router1",
+      "mode": "exclusive",
+      "test-host-port": ["L2EX", "gi1/0/2"],
+      "dut-host-port": ["router1", "gi0/0/2"],
+      "path": [
+        ["l1pjofsw1", "ge-1/1/4"],
+        ["l1pjofsw1", "ge-1/1/6"]
+      ]
+    },
+    "wire15": {
+      "description": "L2EX to router2",
+      "mode": "exclusive",
+      "test-host-port": ["L2EX", "gi1/0/4"],
+      "dut-host-port": ["router2", "gi0/0/2"],
+      "path": [
+        ["l1pjofsw1", "ge-1/1/3"],
+        ["l1pjofsw1", "ge-1/1/5"]
+      ]
+    },
+    "wire16": {
+      "description": "router1 to router2",
+      "mode": "exclusive",
+      "test-host-port": ["router1", "gi0/0/3"],
+      "dut-host-port": ["router2", "gi0/0/3"],
+      "path": [
+        ["l1pjofsw2", "ge-1/1/8"],
+        ["l1pjofsw2", "ge-1/1/2"],
+        ["l1pjofsw1", "ge-1/1/1"],
+        ["l1pjofsw1", "ge-1/1/7"]
+      ]
+    },
+    "wire17": {
+      "description": "router1 to L2SW1",
+      "mode": "exclusive",
+      "test-host-port": ["router1", "gi0/0/1"],
+      "dut-host-port": ["L2SW1", "gi1/0/4"],
+      "path": [
+        ["l1pjofsw2", "ge-1/1/9"],
+        ["l1pjofsw2", "ge-1/1/5"],
+        ["l1pjofsw3", "ge-1/1/2"],
+        ["l1pjofsw3", "ge-1/1/6"]
+      ]
+    },
+    "wire18": {
+      "description": "router2 to L2SW2",
+      "mode": "exclusive",
+      "test-host-port": ["router2", "gi0/0/1"],
+      "dut-host-port": ["L2SW2", "gi1/0/2"],
+      "path": [
+        ["l1pjofsw2", "ge-1/1/11"],
+        ["l1pjofsw2", "ge-1/1/10"]
+      ]
+    },
+    "wire19": {
+      "description": "L2SW1 to L2SW2",
+      "mode": "exclusive",
+      "test-host-port": ["L2SW1", "gi1/0/5"],
+      "dut-host-port": ["L2SW2", "gi1/0/4"],
+      "path": [
+        ["l1pjofsw3", "ge-1/1/7"],
+        ["l1pjofsw3", "ge-1/1/3"]
+      ]
+    }
+  },
+  "wire-group-index": {
+    "wiregroup1": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 101,
+      "wires": ["wire1"]
+    },
+    "wiregroup2": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 102,
+      "wires": ["wire2"]
+    },
+    "wiregroup3": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 103,
+      "wires": ["wire3"]
+    },
+    "wiregroup4": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 104,
+      "wires": ["wire4"]
+    },
+    "wiregroup5": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 105,
+      "wires": ["wire5"]
+    },
+    "wiregroup6": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 106,
+      "wires": ["wire6"]
+    },
+    "wiregroup7": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 107,
+      "wires": ["wire7"]
+    },
+    "wiregroup8": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 108,
+      "wires": ["wire8"]
+    },
+    "wiregroup9": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 109,
+      "wires": ["wire9"]
+    },
+    "wiregroup10": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 110,
+      "wires": ["wire10"]
+    },
+    "wiregroup11": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 111,
+      "wires": ["wire11"]
+    },
+    "wiregroup12": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 112,
+      "wires": ["wire12"]
+    },
+    "wiregroup13": {
+      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "id": 113,
+      "wires": ["wire13"]
+    }
+  }
+}

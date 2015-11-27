@@ -1,0 +1,29 @@
+{
+  "l1patch-defs": {
+    "physical-info-file": "nodeinfo_topo5.json",
+    "logical-info-file": "wireinfo_topo5.json",
+    "exclusive-wire-flows-file": "flows_exclusive_topo5.json",
+    "shared-wire-flows-file": "flows_shared_topo5.json",
+    "generate-exclusive-wire-flows-command": "python run_l1patch.py -p @physical-info@ -l @logical-info@ -m exclusive > @exclusive-wire-flows@",
+    "generate-shared-wire-flows-command": "python run_l1patch.py -p @physical-info@ -l @logical-info@ -m shared > @shared-wire-flows@",
+    "put-exclusive-wire-flows-command": "cat @exclusive-wire-flows@ | python patch_ofc_rest_knocker.py -m put",
+    "put-shared-wire-flows-command": "cat @shared-wire-flows@ |  python patch_ofc_rest_knocker.py -m put",
+    "delete-exclusive-wire-flows-command": "cat @exclusive-wire-flows@ | python patch_ofc_rest_knocker.py -m delete",
+    "delete-shared-wire-flows-command": "cat @shared-wire-flows@ |  python patch_ofc_rest_knocker.py -m delete"
+  },
+  "test-scenario-defs": {
+    "pattern-file": "scenario_pattern_topo5.json",
+    "scenario-file": "scenario_topo5.json",
+    "test-result-file": "test_result_topo5.md",
+    "generate-scenario-command": "python scenario_generator.py -f @pattern@ > @scenario@"
+  },
+  "test-env-params": {
+    "ofs-openflow-version": "OpenFlow10",
+    "mininet-external-interfaces": ["eth2"]
+  },
+  "ping-test-params": {
+    "ping-command": "ping -i 0.2 -c 5",
+    "ping-max-retry": 5,
+    "ping-retry-interval": 1
+  }
+}
