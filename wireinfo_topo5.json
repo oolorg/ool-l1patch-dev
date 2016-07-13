@@ -157,7 +157,7 @@
       ]
     },
     "wire13": {
-      "description": "ext1 to l2sw2",
+      "description": "ext1 to L2EX",
       "mode": "shared",
       "test-host-port": ["ext1", "ext1-eth0"],
       "dut-host-port": ["L2EX", "gi1/0/4"],
@@ -237,67 +237,67 @@
   },
   "wire-group-index": {
     "wiregroup1": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int11, PORT:l2sw1_gi1/0/2(vlan2015)",
       "id": 101,
       "wires": ["wire1"]
     },
     "wiregroup2": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int12, PORT:l2sw1_gi1/0/3(vlan2015)",
       "id": 102,
       "wires": ["wire2"]
     },
     "wiregroup3": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int13, PORT:l2sw2_gi1/0/5(vlan2015)",
       "id": 103,
       "wires": ["wire3"]
     },
     "wiregroup4": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int14, PORT:l2sw2_gi1/0/3(vlan2015)",
       "id": 104,
       "wires": ["wire4"]
     },
     "wiregroup5": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int21, PORT:l2sw1_gi1/0/2(vlan2016)",
       "id": 105,
       "wires": ["wire5"]
     },
     "wiregroup6": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int22, PORT:l2sw1_gi1/0/3(vlan2016)",
       "id": 106,
       "wires": ["wire6"]
     },
     "wiregroup7": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int23, PORT:l2sw2_gi1/0/5(vlan2016)",
       "id": 107,
       "wires": ["wire7"]
     },
     "wiregroup8": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:int24, PORT:l2sw2_gi1/0/3(vlan2016)",
       "id": 108,
       "wires": ["wire8"]
     },
     "wiregroup9": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:dmz11, PORT:l2sw1_gi1/0/2(vlan2013)",
       "id": 109,
       "wires": ["wire9"]
     },
     "wiregroup10": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:dmz12, PORT:l2sw1_gi1/0/3(vlan2013)",
       "id": 110,
       "wires": ["wire10"]
     },
     "wiregroup11": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:dmz13, PORT:l2sw2_gi1/0/5(vlan2013)",
       "id": 111,
       "wires": ["wire11"]
     },
     "wiregroup12": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:dmz14, PORT:l2sw2_gi1/0/3(vlan2013)",
       "id": 112,
       "wires": ["wire12"]
     },
     "wiregroup13": {
-      "description": "DUT:h6, PORT:s6-eth6.200(vlan 200)",
+      "description": "DUT:ext1, PORT:l2ex_gi1/0/4",
       "id": 113,
       "wires": ["wire13"]
     }
