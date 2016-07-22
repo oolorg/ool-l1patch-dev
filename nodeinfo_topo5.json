@@ -1,0 +1,421 @@
+{
+  "test-hosts": {
+    "int11": {
+      "port-index": {
+        "int11-eth0": {
+          "mac-addr": "0a:00:00:15:01:11",
+	  "ip-addr": "10.15.1.1/16",
+	  "gateway": "10.15.1.254"
+        }
+      }
+    },
+    "int12": {
+      "port-index": {
+        "int12-eth0": {
+          "mac-addr": "0a:00:00:15:01:12",
+	  "ip-addr": "10.15.1.2/16",
+	  "gateway": "10.15.1.254"
+        }
+      }
+    },
+    "int13": {
+      "port-index": {
+        "int13-eth0": {
+          "mac-addr": "0a:00:00:15:01:13",
+	  "ip-addr": "10.15.1.3/16",
+	  "gateway": "10.15.1.254"
+        }
+      }
+    },
+    "int14": {
+      "port-index": {
+        "int14-eth0": {
+          "mac-addr": "0a:00:00:15:01:14",
+	  "ip-addr": "10.15.1.4/16",
+	  "gateway": "10.15.1.254"
+        }
+      }
+    },
+    "int21": {
+      "port-index": {
+        "int21-eth0": {
+          "mac-addr": "0a:00:00:16:01:11",
+	  "ip-addr": "10.16.1.1/16",
+	  "gateway": "10.16.1.254"
+        }
+      }
+    },
+    "int22": {
+      "port-index": {
+        "int22-eth0": {
+          "mac-addr": "0a:00:00:16:01:12",
+	  "ip-addr": "10.16.1.2/16",
+	  "gateway": "10.16.1.254"
+        }
+      }
+    },
+    "int23": {
+      "port-index": {
+        "int23-eth0": {
+          "mac-addr": "0a:00:00:16:01:13",
+	  "ip-addr": "10.16.1.3/16",
+	  "gateway": "10.16.1.254"
+        }
+      }
+    },
+    "int24": {
+      "port-index": {
+        "int24-eth0": {
+          "mac-addr": "0a:00:00:16:01:14",
+	  "ip-addr": "10.16.1.4/16",
+	  "gateway": "10.16.1.254"
+        }
+      }
+    },
+    "dmz11": {
+      "port-index": {
+        "dmz11-eth0": {
+          "mac-addr": "0a:00:00:13:01:11",
+	  "ip-addr": "10.13.1.1/16",
+	  "gateway": "10.13.1.254"
+        }
+      }
+    },
+    "dmz12": {
+      "port-index": {
+        "dmz12-eth0": {
+          "mac-addr": "0a:00:00:13:01:12",
+	  "ip-addr": "10.13.1.2/16",
+	  "gateway": "10.13.1.254"
+        }
+      }
+    },
+    "dmz13": {
+      "port-index": {
+        "dmz13-eth0": {
+          "mac-addr": "0a:00:00:13:01:13",
+	  "ip-addr": "10.13.1.3/16",
+	  "gateway": "10.13.1.254"
+        }
+      }
+    },
+    "dmz14": {
+      "port-index": {
+        "dmz14-eth0": {
+          "mac-addr": "0a:00:00:13:01:14",
+	  "ip-addr": "10.13.1.4/16",
+	  "gateway": "10.13.1.254"
+        }
+      }
+    },
+    "ext1": {
+      "port-index": {
+        "ext1-eth0": {
+          "mac-addr": "0a:00:00:00:01:01",
+	  "ip-addr": "100.64.0.1/28",
+	  "gateway": "100.64.0.14"
+        }
+      }
+    }
+  },
+  "dut-hosts": {
+    "L2SW1": {
+      "port-index": {
+        "gi1/0/2.2013": {
+          "vlan-tagged": true,
+          "vlan-id": 2013
+        },
+        "gi1/0/2.2015": {
+          "vlan-tagged": true,
+          "vlan-id": 2015
+        },
+        "gi1/0/2.2016": {
+          "vlan-tagged": true,
+          "vlan-id": 2016
+        },
+        "gi1/0/3.2013": {
+          "vlan-tagged": true,
+          "vlan-id": 2013
+        },
+        "gi1/0/3.2015": {
+          "vlan-tagged": true,
+          "vlan-id": 2015
+        },
+        "gi1/0/3.2016": {
+          "vlan-tagged": true,
+          "vlan-id": 2016
+        },
+        "gi1/0/4": {
+          "vlan-tagged": false
+        },
+        "gi1/0/5": {
+          "vlan-tagged": false
+        }
+      }
+    },
+    "L2SW2": {
+      "port-index": {
+        "gi1/0/2": {
+          "vlan-tagged": false
+        },
+        "gi1/0/3.2013": {
+          "vlan-tagged": true,
+          "vlan-id": 2013
+        },
+        "gi1/0/3.2015": {
+          "vlan-tagged": true,
+          "vlan-id": 2015
+        },
+        "gi1/0/3.2016": {
+          "vlan-tagged": true,
+          "vlan-id": 2016
+        },
+        "gi1/0/4": {
+          "vlan-tagged": false
+        },
+        "gi1/0/5.2013": {
+          "vlan-tagged": true,
+          "vlan-id": 2013
+        },
+        "gi1/0/5.2015": {
+          "vlan-tagged": true,
+          "vlan-id": 2015
+        },
+        "gi1/0/5.2016": {
+          "vlan-tagged": true,
+          "vlan-id": 2016
+        }
+      }
+    },
+    "L2EX": {
+      "port-index": {
+        "gi1/0/2": {
+          "vlan-tagged": false
+        },
+        "gi1/0/3": {
+          "vlan-tagged": false
+        },
+        "gi1/0/4": {
+          "vlan-tagged": false
+        }
+      }
+    },
+    "router1": {
+      "port-index": {
+        "gi0/0/1": {
+          "vlan-tagged": false
+        },
+        "gi0/0/2": {
+          "vlan-tagged": false
+        },
+        "gi0/0/3": {
+          "vlan-tagged": false
+        }
+      }
+    },
+    "router2": {
+      "port-index": {
+        "gi0/0/1": {
+          "vlan-tagged": false
+        },
+        "gi0/0/2": {
+          "vlan-tagged": false
+        },
+        "gi0/0/3": {
+          "vlan-tagged": false
+        }
+      }
+    }
+  },
+  "dispatchers": {
+    "s1": {
+      "datapath-id": 1,
+      "description": "host edge switch",
+      "port-index": {
+        "s1-eth1": {
+          "number": 1
+        },
+        "s1-eth2": {
+          "number": 2
+        },
+        "s1-eth3": {
+          "number": 3
+        },
+        "s1-eth4": {
+          "number": 4
+        },
+        "s1-eth5": {
+          "number": 5
+        },
+        "s1-eth6": {
+          "number": 6
+        },
+        "s1-eth7": {
+          "number": 7
+        },
+        "s1-eth8": {
+          "number": 8
+        },
+        "s1-eth9": {
+          "number": 9
+        },
+        "s1-eth10": {
+          "number": 10
+        },
+        "s1-eth11": {
+          "number": 11
+        },
+        "s1-eth12": {
+          "number": 12
+        },
+        "s1-eth13": {
+          "number": 13
+        },
+        "eth2": {
+          "number": 14
+        }
+      }
+    },
+    "l1pjofsw1": {
+      "datapath-id": 5,
+      "description": "L1PJ OpenFlowSwitch1(Dispatchers1)",
+      "port-index": {
+        "ge-1/1/1": {
+          "number": 1
+        },
+        "ge-1/1/2": {
+          "number": 2
+        },
+        "ge-1/1/3": {
+          "number": 3
+        },
+        "ge-1/1/4": {
+          "number": 4
+        },
+        "ge-1/1/5": {
+          "number": 5
+        },
+        "ge-1/1/6": {
+          "number": 6
+        },
+        "ge-1/1/7": {
+          "number": 7
+        },
+        "ge-1/1/8": {
+          "number": 8
+        }
+      }
+    },
+    "l1pjofsw2": {
+      "datapath-id": 4,
+      "description": "L1PJ OpenFlowSwitch2(Dispatchers2)",
+      "port-index": {
+        "ge-1/1/1": {
+          "number": 1
+        },
+        "ge-1/1/2": {
+          "number": 2
+        },
+        "ge-1/1/3": {
+          "number": 3
+        },
+        "ge-1/1/4": {
+          "number": 4
+        },
+        "ge-1/1/5": {
+          "number": 5
+        },
+        "ge-1/1/6": {
+          "number": 6
+        },
+        "ge-1/1/7": {
+          "number": 7
+        },
+        "ge-1/1/8": {
+          "number": 8
+        },
+        "ge-1/1/9": {
+          "number": 9
+        },
+        "ge-1/1/10": {
+          "number": 10
+        },
+        "ge-1/1/11": {
+          "number": 11
+        }
+      }
+    },
+    "l1pjofsw3": {
+      "datapath-id": 6790914079155444010,
+      "description": "L1PJ OpenFlowSwitch3(Dispatchers3)",
+      "port-index": {
+        "ge-1/1/1": {
+          "number": 1
+        },
+        "ge-1/1/2": {
+          "number": 2
+        },
+        "ge-1/1/3": {
+          "number": 3
+        },
+        "ge-1/1/4": {
+          "number": 4
+        },
+        "ge-1/1/5": {
+          "number": 5
+        },
+        "ge-1/1/6": {
+          "number": 6
+        },
+        "ge-1/1/7": {
+          "number": 7
+        }
+      }
+    }
+  },
+  "link-list": [
+    [["int11", "int11-eth0"], ["s1", "s1-eth1"]],
+    [["int12", "int12-eth0"], ["s1", "s1-eth2"]],
+    [["int13", "int13-eth0"], ["s1", "s1-eth3"]],
+    [["int14", "int14-eth0"], ["s1", "s1-eth4"]],
+    [["int21", "int21-eth0"], ["s1", "s1-eth5"]],
+    [["int22", "int22-eth0"], ["s1", "s1-eth6"]],
+    [["int23", "int23-eth0"], ["s1", "s1-eth7"]],
+    [["int24", "int24-eth0"], ["s1", "s1-eth8"]],
+    [["dmz11", "dmz11-eth0"], ["s1", "s1-eth9"]],
+    [["dmz12", "dmz12-eth0"], ["s1", "s1-eth10"]],
+    [["dmz13", "dmz13-eth0"], ["s1", "s1-eth11"]],
+    [["dmz14", "dmz14-eth0"], ["s1", "s1-eth12"]],
+    [["ext1", "ext1-eth0"], ["s1", "s1-eth13"]],
+    [["l1pjofsw1", "ge-1/1/1"], ["l1pjofsw2", "ge-1/1/2"]],
+    [["l1pjofsw1", "ge-1/1/2"], ["l1pjofsw2", "ge-1/1/3"]],
+    [["l1pjofsw1", "ge-1/1/3"], ["L2EX", "gi1/0/3"]],
+    [["l1pjofsw1", "ge-1/1/4"], ["L2EX", "gi1/0/2"]],
+    [["l1pjofsw1", "ge-1/1/5"], ["router2", "gi0/0/2"]],
+    [["l1pjofsw1", "ge-1/1/6"], ["router1", "gi0/0/2"]],
+    [["l1pjofsw1", "ge-1/1/7"], ["router2", "gi0/0/3"]],
+    [["l1pjofsw1", "ge-1/1/8"], ["L2EX", "gi1/0/4"]],
+    [["l1pjofsw2", "ge-1/1/1"], ["s1", "eth2"]],
+    [["l1pjofsw2", "ge-1/1/4"], ["l1pjofsw3", "ge-1/1/1"]],
+    [["l1pjofsw2", "ge-1/1/5"], ["l1pjofsw3", "ge-1/1/2"]],
+    [["l1pjofsw2", "ge-1/1/6"], ["L2SW1", "gi1/0/2.2013"]],
+    [["l1pjofsw2", "ge-1/1/6"], ["L2SW1", "gi1/0/2.2015"]],
+    [["l1pjofsw2", "ge-1/1/6"], ["L2SW1", "gi1/0/2.2016"]],
+    [["l1pjofsw2", "ge-1/1/7"], ["L2SW1", "gi1/0/3.2013"]],
+    [["l1pjofsw2", "ge-1/1/7"], ["L2SW1", "gi1/0/3.2015"]],
+    [["l1pjofsw2", "ge-1/1/7"], ["L2SW1", "gi1/0/3.2016"]],
+    [["l1pjofsw2", "ge-1/1/8"], ["router1", "gi0/0/3"]],
+    [["l1pjofsw2", "ge-1/1/9"], ["router1", "gi0/0/1"]],
+    [["l1pjofsw2", "ge-1/1/10"], ["L2SW2", "gi1/0/2"]],
+    [["l1pjofsw2", "ge-1/1/11"], ["router2", "gi0/0/1"]],
+    [["l1pjofsw3", "ge-1/1/3"], ["L2SW2", "gi1/0/4"]],
+    [["l1pjofsw3", "ge-1/1/4"], ["L2SW2", "gi1/0/5.2013"]],
+    [["l1pjofsw3", "ge-1/1/4"], ["L2SW2", "gi1/0/5.2015"]],
+    [["l1pjofsw3", "ge-1/1/4"], ["L2SW2", "gi1/0/5.2016"]],
+    [["l1pjofsw3", "ge-1/1/5"], ["L2SW2", "gi1/0/3.2013"]],
+    [["l1pjofsw3", "ge-1/1/5"], ["L2SW2", "gi1/0/3.2015"]],
+    [["l1pjofsw3", "ge-1/1/5"], ["L2SW2", "gi1/0/3.2016"]],
+    [["l1pjofsw3", "ge-1/1/6"], ["L2SW1", "gi1/0/4"]],
+    [["l1pjofsw3", "ge-1/1/7"], ["L2SW1", "gi1/0/5"]]
+  ]
+}

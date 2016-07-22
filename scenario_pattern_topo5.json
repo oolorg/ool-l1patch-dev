@@ -1,0 +1,202 @@
+{
+  "params": {
+    "@router1-ext1-ip@": "10.11.1.254",
+    "@router2-ext1-ip@": "10.11.1.253",
+    "@dmz1-vip@": "10.13.1.254",
+    "@router1-dmz1-ip@": "10.13.1.253",
+    "@router2-dmz1-ip@": "10.13.1.252",
+    "@int1-vip@": "10.15.1.254",
+    "@router1-int1-ip@": "10.15.1.253",
+    "@router2-int1-ip@": "10.15.1.252",
+    "@int2-vip@": "10.16.1.254",
+    "@router1-int2-ip@": "10.16.1.253",
+    "@router2-int2-ip@": "10.16.1.252"
+  },
+  "scenarios": {
+    "L2-return-by-device": {
+      "L2SW1-dmz1(SUCCESS)": [
+        [
+          "dmz11"
+        ],
+        [
+          "dmz12"
+        ]
+      ],
+      "L2SW1-int1(SUCCESS)": [
+        [
+          "int11"
+        ],
+        [
+          "int12"
+        ]
+      ],
+      "L2SW1-int2(SUCCESS)": [
+        [
+          "int21"
+        ],
+        [
+          "int22"
+        ]
+      ],
+      "L2SW2-dmz1(SUCCESS)": [
+        [
+          "dmz13"
+        ],
+        [
+          "dmz14"
+        ]
+      ],
+      "L2SW2-int1(SUCCESS)": [
+        [
+          "int13"
+        ],
+        [
+          "int14"
+        ]
+      ],
+      "L2SW2-int2(SUCCESS)": [
+        [
+          "int23"
+        ],
+        [
+          "int24"
+        ]
+      ]
+    },
+    "L2-via-neighbor-device": {
+      "dmz1(SUCCESS)": [
+        [
+          "dmz11",
+          "dmz12"
+        ],
+        [
+          "dmz13",
+          "dmz14"
+        ],
+        [
+          "@router1-dmz1-ip@",
+          "@router2-dmz1-ip@",
+          "@dmz1-vip@"
+        ]
+      ],
+      "int1(SUCCESS)": [
+        [
+          "int11",
+          "int12"
+        ],
+        [
+          "int13",
+          "int14"
+        ],
+        [
+          "@router1-int1-ip@",
+          "@router2-int1-ip@",
+          "@int1-vip@"
+        ]
+      ],
+      "int2(SUCCESS)": [
+        [
+          "int21",
+          "int22"
+        ],
+        [
+          "int23",
+          "int24"
+        ],
+        [
+          "@router1-int2-ip@",
+          "@router2-int2-ip@",
+          "@int2-vip@"
+        ]
+      ],
+      "ext1(SUCCESS)": [
+        [
+          "ext1"
+        ],
+        [
+          "@router1-ext1-ip@",
+          "@router2-ext1-ip@"
+        ]
+      ]
+    },
+    "L3-within-zone": {
+      "int(SUCCESS)": [
+        [
+          "int11",
+          "int12",
+          "int13",
+          "int14"
+        ],
+        [
+          "int21",
+          "int22",
+          "int23",
+          "int24"
+        ]
+      ]
+    },
+    "L3-between-zones": {
+      "int1-dmz1(SUCCESS)": [
+        [
+          "int11",
+          "int12",
+          "int13",
+          "int14"
+        ],
+        [
+          "dmz11",
+          "dmz12",
+          "dmz13",
+          "dmz14"
+        ]
+      ],
+      "int2-dmz1(SUCCESS)": [
+        [
+          "int21",
+          "int22",
+          "int23",
+          "int24"
+        ],
+        [
+          "dmz11",
+          "dmz12",
+          "dmz13",
+          "dmz14"
+        ]
+      ],
+      "ext-dmz1(SUCCESS)": [
+        [
+          "ext1"
+        ],
+        [
+          "dmz11",
+          "dmz12",
+          "dmz13",
+          "dmz14"
+        ]
+      ],
+      "ext-int1(SUCCESS)": [
+        [
+          "ext1"
+        ],
+        [
+          "int11",
+          "int12",
+          "int13",
+          "int14"
+        ]
+      ],
+      "ext-int2(SUCCESS)": [
+        [
+          "ext1"
+        ],
+        [
+          "int21",
+          "int22",
+          "int23",
+          "int24"
+        ]
+      ]
+    }
+  }
+}

@@ -20,7 +20,7 @@ import patch_ofc_error
 '''
 "L1patch" OpenFlow controller based on "OFPatchPanel".
 See also "OFPatchPanel" application.
-nmasao/OFPatchPanel-SDNHackathon2014 · GitHub
+nmasao/OFPatchPanel-SDNHackathon2014 - GitHub
 https://github.com/nmasao/OFPatchPanel-SDNHackathon2014
 '''
 
